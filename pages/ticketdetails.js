@@ -15,8 +15,42 @@ class TicketDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            condition1: false,
+            condition2: false,
+            condition3: false,
         };
+        this.handleClick = this.handleClick.bind(this);
+        this.handleClickFlight1 = this.handleClickFlight1.bind(this);
+        this.handleClickFlight2 = this.handleClickFlight2.bind(this);
+    }
+
+    // handleChange(date) {
+    //     this.setState({
+    //         startDate: date
+    //     });
+    // }
+
+    handleClick() {
+        this.setState({
+            condition1: !this.state.condition1
+        });
+        console.log('Condition --- ', this.state.condition1);
+    }
+
+    handleClickFlight1() {
+        this.setState({
+            condition2: !this.state.condition2,
+            condition3: false
+        });
+        console.log('Condition --- ', this.state.condition2);
+    }
+
+    handleClickFlight2() {
+        this.setState({
+            condition3: !this.state.condition3,
+            condition2: false
+        });
+        console.log('Condition --- ', this.state.condition3);
     }
 
     render() {
@@ -55,7 +89,7 @@ class TicketDetails extends Component {
                                             <Card>
                                                 <Card.Header>
                                                     <p className='outbound'><b>Outbound, </b>Tues 1 Oct 2019</p>
-                                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                                    <Accordion.Toggle as={Button} variant="link" eventKey="0" onClick={ this.handleClickFlight1 }>
                                                         <Row className='airlines'>
                                                             <Col xs={12} sm={3} className=''>
                                                                 <p className="sort-countryname">
@@ -72,7 +106,8 @@ class TicketDetails extends Component {
                                                                     </Col>
                                                                     <Col xs={4} className='text-center'>
                                                                         <div className='hrs'>
-                                                                            <span className="mini-text" style={{ borderBottom: '1px solid #909090' }}>2hrs 25mins</span>
+                                                                            <span className='mini-text'>2 hrs</span>
+                                                                            <span className='line_jet'></span>
                                                                             <span className="mini-text sky-text">Non stop</span>
                                                                             <img className="fa fa-fighter-jet autocomplete-flight-img" alt="Flight" src="static/images/flight.png" width="16px" />
                                                                         </div>
@@ -86,7 +121,7 @@ class TicketDetails extends Component {
                                                                 </Row>
                                                             </Col>
                                                             <Col xs={12} sm={1} className='text-center'>
-                                                                <i className="fa fa-chevron-down" aria-hidden="true"></i>
+                                                                <i className="fa fa-chevron-down" aria-hidden="true"  className= { this.state.condition2 ? "fa fa-chevron-down button_1 toggled" : "fa fa-chevron-down button_1" }></i>
                                                             </Col>
                                                         </Row>
 
@@ -127,7 +162,7 @@ class TicketDetails extends Component {
                                                                             BOM Mumbai
                                                                         </div>
                                                                         <div className="ttime">
-                                                                            LHR London Heathrow
+                                                                            IXM Madurai
                                                                         </div>
                                                                     </Col>
                                                                 </Row>
@@ -142,7 +177,7 @@ class TicketDetails extends Component {
                                             <Card>
                                                 <Card.Header>
                                                     <p className='outbound'><b>Return, </b>Thurs 31 Oct 2019</p>
-                                                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                                                    <Accordion.Toggle as={Button} variant="link" eventKey="1" onClick={ this.handleClickFlight2 }>
                                                         <Row className='airlines'>
                                                             <Col xs={12} sm={3} className=''>
                                                                 <p className="sort-countryname">Airlines</p>
@@ -157,7 +192,8 @@ class TicketDetails extends Component {
                                                                     </Col>
                                                                     <Col xs={4} className='text-center'>
                                                                         <div className='hrs'>
-                                                                            <span className="mini-text" style={{ borderBottom: '1px solid #909090' }}>2hrs 25mins</span>
+                                                                            <span className="mini-text">2hrs 25mins</span>
+                                                                            <span className='line_jet'></span>
                                                                             <span className="mini-text sky-text">Non stop</span>
                                                                             <img className="fa fa-fighter-jet autocomplete-flight-img" alt="Flight" src="static/images/flight.png" width="16px" />
                                                                         </div>
@@ -171,7 +207,7 @@ class TicketDetails extends Component {
                                                                 </Row>
                                                             </Col>
                                                             <Col xs={12} sm={1} className='text-center'>
-                                                                <i className="fa fa-chevron-down" aria-hidden="true"></i>
+                                                                <i className="fa fa-chevron-down" aria-hidden="true"  className= { this.state.condition3 ? "fa fa-chevron-down button_2 toggled" : "fa fa-chevron-down button_2" }></i>
                                                             </Col>
                                                         </Row>
                                                     </Accordion.Toggle>
@@ -211,7 +247,7 @@ class TicketDetails extends Component {
                                                                             BOM Mumbai
                                                                         </div>
                                                                         <div className="ttime">
-                                                                            LHR London Heathrow
+                                                                            IXM Madurai
                                                                         </div>
                                                                     </Col>
                                                                 </Row>
@@ -230,8 +266,9 @@ class TicketDetails extends Component {
                                             <Accordion className='read_before_booking' defaultActiveKey="0">
                                                 <Card>
                                                     <Card.Header>
-                                                        <Accordion.Toggle as={Button} variant="new" eventKey="0">
+                                                        <Accordion.Toggle as={Button} variant="new" eventKey="0" onClick={ this.handleClick } >
                                                             Read before booking
+                                                            <i className='fa fa-chevron-down' className= { this.state.condition1 ? "fa fa-chevron-down button toggled" : "fa fa-chevron-down button" }></i>
                                                         </Accordion.Toggle>
                                                     </Card.Header>
                                                     <Accordion.Collapse eventKey="0">

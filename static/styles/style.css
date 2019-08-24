@@ -742,8 +742,9 @@ input.inp_mail:focus {
 }
 
 p.f_para {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.25;
+    margin-bottom: 8px;
 }
 
 p.address {
@@ -867,7 +868,7 @@ p.address {
 
 .filter-data {
     padding: 25px 2em;
-    background-color: #fafafa;
+    background-color: #f3f2f5;
 }
 
 div#best, div#cheapest, div#fastest {
@@ -1497,4 +1498,68 @@ span.deals_no {
     button.bpk-button {
         padding: 4px 8px;
     }
+}			
+.fa.fa-chevron-down.button {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    float: right;
 }
+
+.fa.fa-chevron-down.button.toggled {
+    -moz-transform: rotate(182deg);
+    -webkit-transform: rotate(182deg);
+    transform: rotate(182deg);
+}
+
+.fa.fa-chevron-down.button_1 {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    float: right;
+}
+
+.fa.fa-chevron-down.button_1.toggled {
+    -moz-transform: rotate(182deg);
+    -webkit-transform: rotate(182deg);
+    transform: rotate(182deg);
+}
+
+.fa.fa-chevron-down.button_2 {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    float: right;
+}
+
+.fa.fa-chevron-down.button_2.toggled {
+    -moz-transform: rotate(182deg);
+    -webkit-transform: rotate(182deg);
+    transform: rotate(182deg);
+}
+
+.fa.fa-chevron-down.button_3 {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    float: right;
+}
+
+.fa.fa-chevron-down.button_3.toggled {
+    -moz-transform: rotate(182deg);
+    -webkit-transform: rotate(182deg);
+    transform: rotate(182deg);
+}
+
+.line_jet {
+    height: 1.5px;
+    width: 90%;
+    background-color: #817b8f;
+    margin: .375rem auto;
+    padding: 0;
+    position: relative;
+    border-radius: .375rem;
+    display: block;
+    text-align: center;
+    line-height: 0;
+}		

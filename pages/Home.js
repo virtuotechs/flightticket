@@ -41,7 +41,7 @@ import NumericInput from 'react-numeric-input';
   
   function renderSuggestion(suggestion, { query }) {
 	
-  	const suggestionText = `${suggestion.CityName} (${suggestion.CityId})`;
+  	const suggestionText = `${suggestion.CityName} (${suggestion.PlaceId})`;
 	const suggestionCountry = `${suggestion.CountryName}`;
 	const matches = AutosuggestHighlightMatch(suggestionText,query);
 	const parts = AutosuggestHighlightParse(suggestionText, matches);
@@ -54,7 +54,7 @@ import NumericInput from 'react-numeric-input';
 				const className = part.highlight ? 'highlight' : null;
 	
 				return (
-				  <span className={className} key={suggestion.CityId}>{part.text}</span>
+				  <span className={className} key={suggestion.PlaceId}>{part.text}</span>
 				);
 			  })
 			}
@@ -411,7 +411,7 @@ const Index = (props) => {
 																<p>
 																	<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 																	&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-																	({item.CityId})</big>
+																	({item.PlaceId})</big>
 																	<br /><span>{item.CountryName}</span>
 																</p>
 
@@ -453,7 +453,7 @@ const Index = (props) => {
 																<p>
 																	<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 																	&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-																	({item.CityId})</big>
+																	({item.PlaceId})</big>
 																	<br /><span>{item.CountryName}</span>
 																</p>
 
@@ -567,7 +567,7 @@ const Index = (props) => {
 														<p>
 															<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 															&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-															({item.CityId})</big>
+															({item.PlaceId})</big>
 															<br /><span>{item.CountryName}</span>
 														</p>
 
@@ -602,7 +602,7 @@ const Index = (props) => {
 														<p>
 															<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 															&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-															({item.CityId})</big>
+															({item.PlaceId})</big>
 															<br /><span>{item.CountryName}</span>
 														</p>
 
@@ -654,7 +654,7 @@ const Index = (props) => {
 														<p>
 															<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 															&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-															({item.CityId})</big>
+															({item.PlaceId})</big>
 															<br /><span>{item.CountryName}</span>
 														</p>
 
@@ -689,7 +689,7 @@ const Index = (props) => {
 														<p>
 															<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 															&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-															({item.CityId})</big>
+															({item.PlaceId})</big>
 															<br /><span>{item.CountryName}</span>
 														</p>
 
@@ -743,7 +743,7 @@ const Index = (props) => {
 															<p>
 																<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 																&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-																({item.CityId})</big>
+																({item.PlaceId})</big>
 																<br /><span>{item.CountryName}</span>
 															</p>
 
@@ -778,7 +778,7 @@ const Index = (props) => {
 																<p>
 																	<img className='fa fa-fighter-jet' alt="Flight" src='static/images/flight.png' width='25px'></img>
 																	&nbsp;&nbsp;<big>{item.CityName}&nbsp;&nbsp;
-																	({item.CityId})</big>
+																	({item.PlaceId})</big>
 																	<br /><span>{item.CountryName}</span>
 																</p>
 

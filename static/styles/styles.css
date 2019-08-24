@@ -15,9 +15,8 @@ body {
     padding-left: 0px;
     padding-right: 0px;
 }
-.autocomplete-flight-img
-{
-    opacity:0.3;
+.autocomplete-flight-img {
+    opacity:0.5;
 }
 .bg-dark {
     padding: 40px;
@@ -183,6 +182,8 @@ p.small_txt {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    overflow: auto;
+    height: 300px;
 }
 
 .react-autosuggest__suggestion {
@@ -689,7 +690,7 @@ b.green-text small {
 
 .hrs img.fa.fa-fighter-jet {
     position: absolute;
-    top: 0.7em;
+    top: 1em;
     transform: rotate(45deg);
     right: -1.5em;
     left: unset;
@@ -793,6 +794,7 @@ input.form-check-input {
     align-items: center;
     justify-content: center;
     display: flex;
+    background: #fff;
 }
 
 .ad-block p {
