@@ -206,33 +206,36 @@ const Index = (props) => {
 	}
 	
 	const flightsforRoundTrip = (e) => {
-		e.preventDefault();
-		console.log(adultCount);
-		if(adultCount < 1 || adultCount == null)
-		{
-			setAdults_err(!adults_err);
-		}
-		if(childCount < 0 || childCount == null)
-		{
-			setChild_err(!child_err);
-		}	
-		if (preferedFlightClass == "0") {
-			setCabin_err(true);
-		}
-		if (departureDate == "") {
-			setDeparturedate_err(true);
-		}
-		if (returnDate == "") {
-			setReturndate_err(true);
-		}
-		console.log(departureDate);
-		console.log(returnDate);
-		if (departureDate != "" && returnDate != "" && preferedFlightClass != 0) 
-		{
-			Router.push({
-				pathname: '/ticketbooking',
-			})
-		}
+		// e.preventDefault();
+		// console.log(adultCount);
+		// if(adultCount < 1 || adultCount == null)
+		// {
+		// 	setAdults_err(!adults_err);
+		// }
+		// if(childCount < 0 || childCount == null)
+		// {
+		// 	setChild_err(!child_err);
+		// }	
+		// if (preferedFlightClass == "0") {
+		// 	setCabin_err(true);
+		// }
+		// if (departureDate == "") {
+		// 	setDeparturedate_err(true);
+		// }
+		// if (returnDate == "") {
+		// 	setReturndate_err(true);
+		// }
+		// console.log(departureDate);
+		// console.log(returnDate);
+		// if (departureDate != "" && returnDate != "" && preferedFlightClass != 0) 
+		// {
+		// 	Router.push({
+		// 		pathname: '/ticketbooking',
+		// 	})
+		// }
+		Router.push({
+			pathname: '/ticketbooking',
+		})
 	}
 
 		return (	
