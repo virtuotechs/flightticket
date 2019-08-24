@@ -626,7 +626,8 @@ class TicketBooking extends Component {
                                                         {resultData.totalFare == cheapest_price ? <button className="pink-button cheap">CHEAPEST</button> : <button className="pink-button cheap">VALUE FOR MONEY</button>}
                                                         <Row className="travel-timing" style={{ marginTop: '6px' }}>
                                                             <Col md={12} sm={12}>
-                                                                <b>Departure</b> | {dateFormat(this.changeMonthDate(resultData.flightLeg[0].flightDetails.departureDate), "ddd, mmm d")} | {resultData.flightLeg[0].flightDetails.operatingAirlineName}
+                                                                {/* <b>Departure</b> | {dateFormat(this.changeMonthDate(resultData.flightLeg[0].flightDetails.departureDate), "ddd, mmm d")} | {resultData.flightLeg[0].flightDetails.operatingAirlineName} */}
+                                                                <div><b>Departure</b> | Saturday, Aug 24 | Oman Air</div>
                                                             </Col>
                                                         </Row>
                                                         <Row>
@@ -664,7 +665,9 @@ class TicketBooking extends Component {
                                                         </Row>
                                                         <Row className="travel-timing">
                                                             <Col md={12} sm={12}>
-                                                                <b>Return</b> | {dateFormat(this.changeMonthDate(resultData.flightLeg[0].flightDetails.arrivalDate), "ddd, mmm d")} | {resultData.flightLeg[0].flightDetails.operatingAirlineName}
+                                                                {/* <b>Return</b> | {dateFormat(this.changeMonthDate(resultData.flightLeg[0].flightDetails.arrivalDate), "ddd, mmm d")} | {resultData.flightLeg[0].flightDetails.operatingAirlineName} */}
+                                                                <div><b>Return</b> | Thu, Sep 19 | Oman Air</div>
+                                                                
                                                             </Col>
                                                         </Row>
                                                         <Row>
