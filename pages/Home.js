@@ -230,7 +230,7 @@ const Index = (props) => {
 		if (departureDate != "" && returnDate != "" && preferedFlightClass != 0) 
 		{
 			Router.push({
-				pathname: '/ticketbooking',
+				pathname: '/ticketBooking',
 			})
 		}
 	}
