@@ -127,7 +127,7 @@ class TicketDetails extends Component {
                                                                             BOM Mumbai
                                                                         </div>
                                                                         <div className="ttime">
-                                                                            IXM Madurai
+                                                                            LHR London Heathrow
                                                                         </div>
                                                                     </Col>
                                                                 </Row>
@@ -211,7 +211,7 @@ class TicketDetails extends Component {
                                                                             BOM Mumbai
                                                                         </div>
                                                                         <div className="ttime">
-                                                                            IXM Madurai
+                                                                            LHR London Heathrow
                                                                         </div>
                                                                     </Col>
                                                                 </Row>

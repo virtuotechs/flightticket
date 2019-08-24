@@ -741,7 +741,7 @@ class TicketBooking extends Component {
                                                             </p>
                                                         </Col>
                                                         <Col sm={4} xs={5} className="text-right">
-                                                            <p className="sky-text">Flight Details &nbsp;<i className="fa fa-angle-down" aria-hidden="true"></i></p>
+                                                            {/* <p className="sky-text">Flight Details &nbsp;<i className="fa fa-angle-down" aria-hidden="true"></i></p> */}
                                                         </Col>
                                                     </Row>
                                                     {/* <Col xl={8} lg={8} sm={6} xs={6}> */}
