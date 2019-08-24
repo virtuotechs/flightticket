@@ -216,9 +216,9 @@ const Index = (props) => {
 		{
 			setChild_err(!child_err);
 		}	
-		if (preferedFlightClass == "0") {
-			setCabin_err(true);
-		}
+		// if (preferedFlightClass == "0") {
+		// 	setCabin_err(true);
+		// }
 		if (departureDate == "") {
 			setDeparturedate_err(true);
 		}
@@ -227,7 +227,8 @@ const Index = (props) => {
 		}
 		console.log(departureDate);
 		console.log(returnDate);
-		if (departureDate != "" && returnDate != "" && preferedFlightClass != 0) 
+		// if (departureDate != "" && returnDate != "" && preferedFlightClass != 0) 
+		if (departureDate != "" && returnDate != "") 
 		{
 			Router.push({
 				pathname: '/ticketBooking',
@@ -300,7 +301,11 @@ const Index = (props) => {
 										<Form.Group controlId="exampleForm.ControlSelect1">
 											<Form.Label>Cabin Class</Form.Label>
 											<div className="select_box">
-												<Form.Control as="select" name="preferedFlightClass" onChange={changeClass}>
+												<Form.Control as="select" 
+													name="preferedFlightClass" 
+													defaultValue={1}
+													onChange={changeClass}													
+												>
 													<option value="0" hidden>Select</option>
 													<option value="1">Any</option>
 													<option value="2">Business</option>
@@ -477,7 +482,7 @@ const Index = (props) => {
 										<Form.Group controlId="exampleForm.ControlSelect1">
 											<Form.Label>Cabin Class</Form.Label>
 											<div className="select_box">
-												<Form.Control as="select" name="preferedFlightClass" onChange={changeClass}>
+												<Form.Control as="select" name="preferedFlightClass" defaultValue={1} onChange={changeClass}>
 													<option value="0" hidden>Select</option>
 													<option value="1">Any</option>
 													<option value="2">Business</option>
